@@ -16,8 +16,8 @@ class HomeMainBodyHead extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsetsDirectional.only(start: 85*w(context),end: 37*w(context)),
-            child: Text('واشنج لاين',style: GoogleFonts.getFont('Roboto',textStyle:const TextStyle(fontWeight: FontWeight.w900,fontSize: 22,color: Color(0xff756B6B)) ) ,),),
+            margin: EdgeInsetsDirectional.only(start: 30*w(context)),
+            child: Text('مغاسل خط الغسيل',style: GoogleFonts.getFont('Roboto',textStyle:const TextStyle(fontWeight: FontWeight.w900,fontSize: 22,color: Color(0xff756B6B)) ) ,),),
 
           Container(
             margin: EdgeInsetsDirectional.only(start: 136*w(context)),

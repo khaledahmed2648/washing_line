@@ -28,8 +28,16 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  material: ^1.0.0+2
+  qr_flutter: ^4.0.0
+  dio: ^5.1.1
+#  screenshot: ^1.3.0
+  pdf: ^3.8.4
+  path_provider: ^2.0.15
+  share_plus: ^6.3.1
   flutter_credit_card: ^3.0.6
   flutter_localization: ^0.1.10
+
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -45,9 +53,19 @@ dependencies:
   sqflite: ^2.2.8
   flutter_svg: ^2.0.5
   flutter_native_splash: ^2.2.19
+  permission_handler: ^10.2.0
+  intl: ^0.18.0
+  http: ^0.13.6
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/login_logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
 flutter_native_splash:
   color: "#42a5f5"
   image: assets/images/splash.png

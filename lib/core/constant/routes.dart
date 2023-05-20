@@ -4,7 +4,7 @@ class AppRoutes {
   static const String products = '/products';
   static const String productsDetails = '/products_details';
   static const String onBoarding = '/onboarding';
-  static const String card = '/card';
+  static const String payment = '/payment';
   static const String billdetailsScreen = '/billdetails';
   static const String billoneitemdetails = '/billoneitemdetails';
   static const String delegateReportsScreen = '/delegateReportsScreen';

@@ -15,7 +15,7 @@ class BillDetailsRow extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            width: 150*w(context),
+            width: 160*w(context),
             child: Text(
               itemIdentity,
               maxLines: 2,

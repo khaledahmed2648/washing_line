@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:washing_line/core/constant/routes.dart';
+import 'package:washing_line/core/functions.dart';
 
 import '../services/services.dart';
 
@@ -12,14 +13,12 @@ class MainMiddleWare extends GetMiddleware {
   RouteSettings? redirect(String? route) {
     if (MyServices.sharedPreferences.getBool('onBoarding') == true) {
       if (MyServices.sharedPreferences.getBool('login') == true) {
-                return const RouteSettings(name:AppRoutes.home );
-
+        token = MyServices.sharedPreferences.getString('token_access');
+        return const RouteSettings(name: AppRoutes.home);
       } else {
-                return const RouteSettings(name: AppRoutes.login);
-
+        return const RouteSettings(name: AppRoutes.login);
       }
-    }
-    else {
+    } else {
       return null;
     }
   }

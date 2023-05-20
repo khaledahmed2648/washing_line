@@ -3,11 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:washing_line/core/constant/assets_route.dart';
 import 'package:washing_line/core/constant/color.dart';
+import 'package:washing_line/data/model/customer_model.dart';
+import 'package:washing_line/data/model/main_Bills_model.dart';
 
 import '../../../core/constant/main_constants.dart';
 
 class BillsBodyBillItem extends StatelessWidget {
-  const BillsBodyBillItem({Key? key}) : super(key: key);
+  DataBillsModel data;
+   BillsBodyBillItem({Key? key,required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +43,12 @@ class BillsBodyBillItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'سجادة صوف سوداء',
+                  'رقم الفاتورة: ${data.billNo!}',
                   style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w600,
                       fontSize: 16,
                       height: .9,
-                      color: const Color(0xff756B6B)),
-                ),
-                Text(
-                  'الكود : 869575',
-                  style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 12,
-                      color: const Color(0xff756B6B)),
+                      color: const Color(0xff756B6B),),overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
@@ -60,7 +56,7 @@ class BillsBodyBillItem extends StatelessWidget {
               width: 50 * w(context),
             ),
             Text(
-              '150 ر س',
+              '${(double.parse(data.totalAmount!)*1.15).toStringAsFixed(2)} ر س',
               style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w600,
                   fontSize: 12,
