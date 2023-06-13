@@ -17,8 +17,12 @@ class CustomerDataSource{
     } ,options: Options(headers:  {'Authorization': 'Bearer ${MyServices.sharedPreferences.getString('token')}'}));
     return response;
   }
+  static searchCustomerBillsByPhone(String phone)async{
+    Response response=await Crud.dio.get('${AppApiLinks.searchCustomerBillsByCode}phone=$phone' ,options: Options(headers:  {'Authorization': 'Bearer ${MyServices.sharedPreferences.getString('token')}'}));
+    return response;
+  }
   static searchCustomerBillsByCode(String code)async{
-    Response response=await Crud.dio.get('${AppApiLinks.searchCustomerBillsByCode}phone=$code' ,options: Options(headers:  {'Authorization': 'Bearer ${MyServices.sharedPreferences.getString('token')}'}));
+    Response response=await Crud.dio.get('${AppApiLinks.searchCustomerBillsByCode}code=$code' ,options: Options(headers:  {'Authorization': 'Bearer ${MyServices.sharedPreferences.getString('token')}'}));
     return response;
   }
   static addNewCustomer(Map<String,String> data)async{

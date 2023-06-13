@@ -30,13 +30,13 @@ class ProductDetailsScreen extends StatelessWidget {
           Container(
             margin: EdgeInsetsDirectional.only(
                 top: 20 * h(context),
-                start: 21 * w(context),
-                bottom: 30 * h(context)),
+                start: 10 * w(context),
+                bottom: 30 * h(context),end: 20*w(context)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsetsDirectional.only(start: 70 * w(context)),
+                  margin: EdgeInsetsDirectional.only(start: 30 * w(context)),
                   child: Text(
                     supCategoryName,
                     style: GoogleFonts.getFont('Roboto',
@@ -80,7 +80,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       child: GridView.builder(
                           shrinkWrap: true,
                           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2, childAspectRatio: 15/15),
+                              crossAxisCount: 2, childAspectRatio: 15/17),
                           itemBuilder: (context, index) {
                             return  ProductDetailsItem(
                               model: controller.supCategoryProducts[index],
